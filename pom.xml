@@ -142,9 +142,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:msiops/java-either.git</connection>
-    <developerConnection>scm:git:git@github.com:msiops/java-either.git</developerConnection>
-    <url>git@github.com:msiops/java-either.git</url>
+    <connection>scm:git:git@github.com:msiops/java-crockford32.git</connection>
+    <developerConnection>scm:git:git@github.com:msiops/java-crockford32.git</developerConnection>
+    <url>git@github.com:msiops/java-crockford32.git</url>
   </scm>
   <distributionManagement>
     <snapshotRepository>
