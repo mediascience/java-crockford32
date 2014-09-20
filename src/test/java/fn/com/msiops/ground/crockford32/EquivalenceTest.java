@@ -46,9 +46,21 @@ public class EquivalenceTest {
         new Object[] { "110110",
                        "iloILO" },
 
+        // with dashes
+        new Object[] { "123456ABC",
+                       "123-456-ABC" },
+
+       // negative with dashes
+       new Object[] { "-123456ABC",
+                      "-123-456-ABC" },
+
         // everything at once
         new Object[] { "11123456789000AABBCCDDEEFFGGHHJJKKMMNNPPQQRRSSTTVVWWXXYYZZ",
-                       "1lL234567890oOAaBbCcDdEeFfGgHhJjKkMmNnPpQqRrSsTtVvWwXxYyZz" }
+                       "1lL234567890oOAaBbCcDdEeFfGgHhJjKkMmNnPpQqRrSsTtVvWwXxYyZz" },
+
+        // everything at once with dashes
+        new Object[] { "11123456789000AABBCCDDEEFFGGHHJJKKMMNNPPQQRRSSTTVVWWXXYYZZ",
+                       "1-lL234-56-789-0oOAaBb-Cc-DdEeFfG-gH-hJjKkMm-NnPpQ-q-R-rSsT-tVv-Ww-XxYy-Zz" }
 
         );
         // @formatter:on
