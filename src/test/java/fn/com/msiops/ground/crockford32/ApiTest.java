@@ -14,33 +14,46 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.msiops.ground.crockford32;
+package fn.com.msiops.ground.crockford32;
+
+import static org.junit.Assert.*;
 
 import java.math.BigInteger;
 
-public interface Crockford32 {
+import org.junit.Test;
 
-    static BigInteger decode(final String ev) {
+import com.msiops.ground.crockford32.Crockford32;
 
-        return Decoder.INSTANCE.decode(ev);
+public class ApiTest {
 
-    }
+    @Test
+    public void testLongInput() {
 
-    static String encode(final BigInteger v) {
-
-        return Encoder.INSTANCE.encode(v).toString();
-
-    }
-
-    static String encode(final long v) {
-
-        return Encoder.INSTANCE.encode(BigInteger.valueOf(v)).toString();
+        assertEquals(Crockford32.encode(BigInteger.valueOf(123456L)),
+                Crockford32.encode(123456L));
 
     }
 
-    static String encode(String v) {
+    @Test
+    public void testNegativeLongInput() {
 
-        return Encoder.INSTANCE.encode(new BigInteger(v)).toString();
+        assertEquals(Crockford32.encode(BigInteger.valueOf(-123456L)),
+                Crockford32.encode(-123456L));
+
+    }
+
+    @Test
+    public void testNegativeStringInput() {
+
+        assertEquals(Crockford32.encode("-123456"),
+                Crockford32.encode(-123456L));
+
+    }
+
+    @Test
+    public void testStringInput() {
+
+        assertEquals(Crockford32.encode("123456"), Crockford32.encode(123456L));
 
     }
 
