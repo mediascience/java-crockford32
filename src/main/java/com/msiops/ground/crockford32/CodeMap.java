@@ -16,20 +16,15 @@
  */
 package com.msiops.ground.crockford32;
 
-import java.math.BigInteger;
+final class CodeMap {
 
-public interface Crockford32 {
+    public final char encodedDigit;
 
-    static BigInteger decode(final String ev) {
+    public final char javaDigit;
 
-        return Decoder.INSTANCE.decode(ev);
-
-    }
-
-    static String encode(final BigInteger v) {
-
-        return Encoder.INSTANCE.encode(v).toString();
-
+    public CodeMap(final char encodeDigit, final char javaDigit) {
+        this.encodedDigit = encodeDigit;
+        this.javaDigit = javaDigit;
     }
 
 }
