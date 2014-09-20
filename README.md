@@ -1,6 +1,8 @@
 Crockford Base32 for Java
 =========================
 
+[![Build Status](https://travis-ci.org/mediascience/java-crockford32.svg)](https://travis-ci.org/mediascience/java-crockford32)
+
 Base32 encoding using alphabet and character equivalence
 as specified by Douglas Crockford.
 
