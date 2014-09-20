@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Codec implementation data.
+ */
 final class Constants {
 
     public static final String ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";

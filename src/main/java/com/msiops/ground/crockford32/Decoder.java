@@ -23,6 +23,9 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+/**
+ * Decoder implementation.
+ */
 final class Decoder {
 
     public static final Decoder INSTANCE = new Decoder();

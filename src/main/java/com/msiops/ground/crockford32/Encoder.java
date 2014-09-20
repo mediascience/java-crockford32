@@ -21,6 +21,9 @@ import static com.msiops.ground.crockford32.Constants.*;
 import java.math.BigInteger;
 import java.util.stream.IntStream;
 
+/**
+ * Encoder implementation.
+ */
 final class Encoder {
 
     public static final Encoder INSTANCE = new Encoder();

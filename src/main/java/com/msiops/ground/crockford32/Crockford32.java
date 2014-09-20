@@ -18,27 +18,83 @@ package com.msiops.ground.crockford32;
 
 import java.math.BigInteger;
 
+/**
+ * Base32 codec based on the <a
+ * href="http://www.crockford.com/wrmg/base32.html">specification by Douglas
+ * Crockford</a>. Encoded values are compact and resilient to transcription
+ * errors.
+ */
 public interface Crockford32 {
 
+    /**
+     * Decode an encoded value.
+     *
+     * @param ev
+     *            encoded value.
+     *
+     * @return decoded value.
+     *
+     * @throws NullPointerException
+     *             if parameter is null.
+     *
+     * @throws RuntimeException
+     *             if value cannot be decoded.
+     *
+     */
     static BigInteger decode(final String ev) {
 
         return Decoder.INSTANCE.decode(ev);
 
     }
 
+    /**
+     * Encode a value.
+     *
+     * @param v
+     *            value to encode.
+     *
+     * @return encoded value
+     *
+     * @throws NullPointerException
+     *             if parameter is null.
+     */
     static String encode(final BigInteger v) {
 
         return Encoder.INSTANCE.encode(v).toString();
 
     }
 
+    /**
+     * Encode a value.
+     *
+     * @param v
+     *            value to encode.
+     *
+     * @return encoded value
+     *
+     */
     static String encode(final long v) {
 
         return Encoder.INSTANCE.encode(BigInteger.valueOf(v)).toString();
 
     }
 
-    static String encode(String v) {
+    /**
+     * Encode a value.
+     *
+     * @param v
+     *            value to encode. The value must be the string encoding of a
+     *            base-10 integer of any precision.
+     *
+     * @return encoded value
+     *
+     * @throws NullPointerException
+     *             if parameter is null
+     *
+     * @throws RuntimeException
+     *             if the presented value does not represent an integer.
+     */
+    static String encode(final String v) {
 
         return Encoder.INSTANCE.encode(new BigInteger(v)).toString();
 
