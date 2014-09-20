@@ -56,7 +56,7 @@ final class Decoder {
         final boolean neg = ev.length() > 0 && ev.charAt(0) == '-';
 
         final IntStream jdigits = ev.chars().skip(neg ? 1 : 0)
-                .map(c -> this.lookup[c]);
+                .filter(c -> c != '-').map(c -> this.lookup[c]);
 
         final String jev = IntStream
                 .concat(neg ? IntStream.of('-') : IntStream.empty(), jdigits)
