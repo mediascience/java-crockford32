@@ -16,6 +16,10 @@
  */
 package com.msiops.ground.crockford32;
 
+/**
+ * Express the mapping of a digit in the Crockford alphabet to a digit in the
+ * Java alphabet.
+ */
 final class CodeMap {
 
     public final char encodedDigit;
