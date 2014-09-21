@@ -54,6 +54,12 @@ final class Decoder {
         });
     }
 
+    /**
+     * We create the only instance.
+     */
+    private Decoder() {
+    }
+
     public BigInteger decode(final CharSequence ev) {
 
         final boolean neg = ev.length() > 0 && ev.charAt(0) == '-';

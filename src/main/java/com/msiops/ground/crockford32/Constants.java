@@ -45,4 +45,11 @@ final class Constants {
 
     }
 
+    /**
+     * No instances.
+     */
+    private Constants() {
+        throw new AssertionError("no instance allowed");
+    }
+
 }
