@@ -9,8 +9,15 @@ as specified by Douglas Crockford.
 ## Usage
 
 ### Include Dependencies
+```xml
+<dependency>
+    <groupId>com.msiops.ground</groupId>
+    <artifactId>ground-crockford32</artifactId>
+    <version>${v.crockford32}</version>
+</dependency>
+```
 
-(Maven Central deployment pending)
+See [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%20%22com.msiops.ground%22%20a%3A%22ground-crockford32%22) for latest version
 
 
 ### Codec
