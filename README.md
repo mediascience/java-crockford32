@@ -22,15 +22,15 @@ See [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%20%22com.msi
 
 ### Codec
 ```java
-BigInteger v = BigInteger.valueOf(123456);
+final BigInteger v = BigInteger.valueOf(123456);
 
-String encoded = Crockford32.encode(v);
+final String encoded = Crockford32.encode(v);
 assert encoded.equals("3RJ0");
 
-BigInteger recovered = Crockford.decode(encoded);
+final BigInteger recovered = Crockford32.decode(encoded);
 assert recovered.equals(v);
 
-BigInteger recoveredAgain = Crockford.decode("3rjo");
+final BigInteger recoveredAgain = Crockford32.decode("3-rjo");
 assert recoveredAgain.equals(v);
 ```
 
