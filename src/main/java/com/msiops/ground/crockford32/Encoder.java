@@ -30,6 +30,12 @@ final class Encoder {
 
     private final char[] lookup = ALPHABET.toCharArray();
 
+    /**
+     * We create the only instance.
+     */
+    private Encoder() {
+    }
+
     public StringBuilder encode(final BigInteger v) {
         return encode(v, new StringBuilder());
     }

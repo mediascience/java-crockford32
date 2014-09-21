@@ -27,17 +27,12 @@ final class Constants {
 
     public static final String ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
 
-    public static final int BITS_PER_BYTE = Byte.SIZE;
-
-    public static final int BITS_PER_DIGIT;
-
     public static final Collection<CodeMap> EQUIVALENTS;
 
     public static final int RADIX;
 
     static {
         RADIX = ALPHABET.length();
-        BITS_PER_DIGIT = (int) (Math.log(RADIX) / Math.log(2));
 
         final ArrayList<CodeMap> equivalents = new ArrayList<>();
         equivalents.add(new CodeMap('o', '0'));
@@ -48,6 +43,13 @@ final class Constants {
         equivalents.add(new CodeMap('L', '1'));
         EQUIVALENTS = Collections.unmodifiableCollection(equivalents);
 
+    }
+
+    /**
+     * No instances.
+     */
+    private Constants() {
+        throw new AssertionError("no instance allowed");
     }
 
 }
